@@ -1,9 +1,9 @@
 import React from 'react';
 import { gql, useSubscription } from "@apollo/client";
 
-const CHATS_SUBSCRIPTION = gql`
-  subscription OnChatsListChanged {
-    chatsListChanged {
+const CHAT_CHANGED_SUBSCRIPTION = gql`
+  subscription ChatChanged {
+    chatChanged {
       id
       contact {
           name
@@ -30,23 +30,27 @@ interface Chat {
   lastMessage: Message;
 }
 
-interface ChatsSubscriptionData {
-  chatsListChanged: Chat[];
+interface ChatChangedSubscriptionData {
+  chatChanged: Chat;
 }
 
 function SubscriptionExample() {
-  const { data } = useSubscription<ChatsSubscriptionData>(CHATS_SUBSCRIPTION);
+  const { data } = useSubscription<ChatChangedSubscriptionData>(CHAT_CHANGED_SUBSCRIPTION);
 
-  const chats = data?.chatsListChanged;
+  const chat = data?.chatChanged;
 
   return (
-    <ul>
-      {chats?.map((chat) => (
-        <li key={chat.id}>
-          Chat with {chat.contact.name} - Last message: {chat.lastMessage.text}
-        </li>
-      ))}
-    </ul>
+    <div>
+      {chat ?
+        (
+          <div>Chat with {chat.contact.name} - Last message: {chat.lastMessage.text}</div>
+        )
+        :
+        (
+          <div>No data received from subscription yet</div>
+        )}
+    </div>
+
   );
 }
 
