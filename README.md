@@ -26,11 +26,11 @@ You are free to use any libraries you want for the challenge, but please make su
 
 - The app should be built using the lastest version of React
 
-- The app should preferably be coded in TypeScript, however we also accept submissions wrote in plain JavaScript
+- The app should preferably be coded in TypeScript, however we also accept submissions written in plain JavaScript
 
 - The app should interact with the provided GraphQL API
 
-- The codebase should be clean and easy to read (however we are consciuous of the time constraints, so don't stress too much on this last point)
+- The codebase should be clean and easy to read (however we are conscious of the time constraints, so don't stress too much on this last point)
 
 ## The API you will use
 
