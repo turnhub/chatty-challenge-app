@@ -20,9 +20,9 @@ From the same main area, it should be possible to send a new message in the chat
 
 New incoming chats/messages should show up in the app without needing to reload the page.
 
-### Technical requirements
+## Technical requirements
 
-You are free to use any libraries you want for the challenge, but please make sure to follow the following technical requirements:
+You are free to use any libraries you want for the challenge, but please make sure to follow the following technical requirements. Also consider using this starter React project (instructions in dedicated paragraph below) to accelerate times.
 
 - The app should be built using the lastest version of React
 
