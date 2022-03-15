@@ -50,7 +50,7 @@ The token is valid for 60 days. You don't need to implement authentication in yo
 
 You can explore the GraphQL API schema using the GraphQL Playground hosted [here](https://chatty.gigalixirapp.com/graphql/graphiql).
 
-Please remember that most API calls require authentication, so you would need to add an HTTP header to the Playground interface as whown in the picture:
+Please remember that most API calls require authentication, so you would need to add an HTTP header to the Playground interface as shown in the picture:
 
 ![Setting Authentication header in graphiQL](graphiql-header-example.png)
 
@@ -82,15 +82,15 @@ Please remember to keep it minimal and not spend too much time on the challenge.
 
 Here are some tricks to keep the project small:
 
-- Don't implement authentication, it's perfectly fine to hardcode you access token in the app (in fact, that's what we did in this starter project).
+- Don't implement authentication, it's perfectly fine to hardcode you access token in the app (in fact, that's what we did in this starter project)
 
-- Want to showcase your exceptional UI/design abilities? Just do it on a very small element and add a comment saying you would normally do the same for every element.
+- Want to showcase your exceptional UI/design abilities? Just do it on a very small element and add a comment saying you would normally do the same for every element
 
-- Want to show how you write tests? Just write a single, small one.
+- Want to show how you write tests? Just write a single, small one
 
-- Take shortcuts, just add some comments explaining how you would do it normally if you had the time.
+- Take shortcuts, just add some comments explaining how you would do things normally if you had the time
 
-- Want to showcase something that takes too long to build? Just describe it using comments in your code, you don't have to actually implement it.
+- Want to showcase something that takes too long to build? Just describe it using comments in your code, you don't have to actually implement it
 
 ## API settings
 
