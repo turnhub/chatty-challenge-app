@@ -60,7 +60,7 @@ To facilitate the task, we have created this starter React project, which is alr
 
 All you need to start this example project is the following:
 
-1. Fork this repo on GitHub and clone your fork on your computer
+1. Clone this repository on your computer
 
 1. Follow the steps in the previous paragraph to create an account on the challenge website and obtain your API token
 
