@@ -118,4 +118,4 @@ To connect to the websocket (if you intend to use GraphQL subscriptions) you nee
 
 ## Need help?
 
-Please contact us by email at info@turn.io in case of questions.
+Please contact us by email at federico@turn.io in case of questions.
