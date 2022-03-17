@@ -12,13 +12,15 @@ For this challenge, you will build a minimal chat web UI, think of something lik
 
 ## App requirements
 
-We'd like to see a minimal application that interacts with the provided GraphQL API and shows the list of chats in a sidebar.
+We'd like to see a minimal application that interacts with the provided GraphQL API.
 
-Once a chat is selected from the sidebar, the app should list the messages for that chat inside the main area.
+1. Show the list of chats in a sidebar
 
-From the same main area, it should be possible to send a new message in the chat.
+2. Once a chat is selected from the sidebar, the app should list the messages for that chat inside the main area
 
-New incoming chats/messages should show up in the app without needing to reload the page.
+3. From the same main area, it should be possible to send a new message in the chat
+
+4. New incoming chats/messages should show up in the app without needing to reload the page.
 
 ## Technical requirements
 
