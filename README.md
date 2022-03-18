@@ -12,45 +12,51 @@ For this challenge, you will build a minimal chat web UI, think of something lik
 
 ## App requirements
 
-We'd like to see a minimal application that interacts with the provided GraphQL API.
+We'd like to see a minimal chat application that interacts with the provided GraphQL API.
 
-1. Show the list of chats in a sidebar
+Here are the most important requirements:
 
-2. Once a chat is selected from the sidebar, the app should list the messages for that chat inside the main area
+1. Show the list of chats in a sidebar.
 
-3. From the same main area, it should be possible to send a new message in the chat
+2. Once a chat is selected from the sidebar, the app should list the messages for that chat inside the main area.
 
-4. New incoming chats/messages should show up in the app without needing to reload the page.
+3. From the same main area, it should be possible to send a new message in the chat.
+
+4. New incoming chats/messages (both received and sent) should show up in the app without needing to reload the page.
 
 ## Technical requirements
 
-You are free to use any libraries you want for the challenge, but please make sure to follow the following technical requirements. Also consider using this starter React project (instructions in dedicated paragraph below) to accelerate times.
+You are free to use any libraries you want for the challenge, but please make sure to follow the these technical requirements. Also consider using this starter React project (instructions in dedicated paragraph below) to accelerate times.
 
-- The app should be built using the lastest version of React
+- The app should be built using the lastest version of React.
 
-- The app should preferably be coded in TypeScript, however we also accept submissions written in plain JavaScript
+- The app should preferably be coded in TypeScript, however we also accept submissions written in plain JavaScript.
 
-- The app should interact with the provided GraphQL API
+- The app should interact with the provided GraphQL API.
 
-- The codebase should be clean and easy to read (however we are conscious of the time constraints, so don't stress too much on this last point)
+- The codebase should be clean and easy to read (however we are conscious of the time constraints, so don't stress too much on this last point).
 
 ## The API you will use
 
-We have built a GraphQL API for the challenge. Your app will connect to the GraphQL API to fetch the list of chats and messages and will use it to send new messages.
+We have built a GraphQL API for the challenge. Your app will connect to the GraphQL API to fetch the list of chats and messages and will use it to send new messages. The source code for the API is [here](https://github.com/turnhub/chatty-challenge-api), in case you are interested.
 
-The API simulates real-world chats (not really, it's not that smart!) and constantly generates new incoming chats/messages.
+The API simulates real-world chats (not really, it's not that smart!) and constantly generates new incoming chats/messages. It also replies to your messages most of the times.
 
 To use the API, you will need an API token. Follow these steps to get an API token:
 
 1. Visit https://chatty.gigalixirapp.com/
-2. Click on _Register_ and create an account
-3. Once logged in, you will find your API token shown in the UI
+2. Click on _Register_ and create an account.
+3. Once logged in, you will find your API token shown in the UI.
 
-The token is valid for 60 days. You don't need to implement authentication in your app, you just need to hardcode the API token in the app in to be able to use the API.
+The token is valid for 60 days. You don't need to implement authentication in your app, you just need to hardcode the API token in your code like we did in this starter project.
 
 ### Explore the API
 
-You can explore the GraphQL API schema using the GraphQL Playground hosted [here](https://chatty.gigalixirapp.com/graphql/graphiql).
+You can explore the GraphQL API schema using the GraphQL Playground hosted at https://chatty.gigalixirapp.com/graphql/graphiql.
+
+To explore the schema, expand the _SCHEMA_ drawer from the right side of the Playground UI:
+
+![Exploring the schema](graphiql-schema.png)
 
 Please remember that most API calls require authentication, so you would need to add an HTTP header to the Playground interface as shown in the picture:
 
@@ -58,13 +64,15 @@ Please remember that most API calls require authentication, so you would need to
 
 ## This React starter project
 
-To facilitate the task, we have created this starter React project, which is already connected to the GraphQL API for the challenge using [Apollo React Client](https://www.apollographql.com/docs/react).
+In order to get you up and running, we have created this starter React project, which is already connected to the GraphQL API for the challenge using [Apollo React Client](https://www.apollographql.com/docs/react).
+
+You are free to use different libraries and start your React project in a different way, we hope the example code in this project will still be useful to you.
 
 All you need to start this example project is the following:
 
-1. Clone this repository on your computer
+1. Clone this repository on your computer.
 
-1. Follow the steps in the previous paragraph to create an account on the challenge website and obtain your API token
+1. Follow the steps in the previous paragraph to create an account on the challenge website and obtain your API token.
 
 1. Add a `.env` file to the root of the project and add your API token to it using the following syntax:
 
@@ -72,11 +80,9 @@ All you need to start this example project is the following:
    REACT_APP_API_TOKEN=your-api-token-here
    ```
 
-1. Install dependencies with `npm install`
+1. Install dependencies with `npm install`.
 
-1. Run the development server with `npm run start`
-
-You are free to use different libraries and start your React project in a different way, we hope the example code in this project will still be useful to you.
+1. Run the development server with `npm run start`.
 
 ## Important: keep it minimal!
 
@@ -84,15 +90,15 @@ Please remember to keep it minimal and not spend too much time on the challenge.
 
 Here are some tricks to keep the project small:
 
-- Don't implement authentication, it's perfectly fine to hardcode you access token in the app (in fact, that's what we did in this starter project)
+- Don't implement authentication, it's perfectly fine to hardcode you access token in the app (in fact, that's what we did in this starter project).
 
-- Want to showcase your exceptional UI/design abilities? Just do it on a very small element and add a comment saying you would normally do the same for every element
+- Want to showcase your exceptional UI/design abilities? Just do it on a very small element and add a comment saying you would normally do the same for every element.
 
-- Want to show how you write tests? Just write a single, small one
+- Want to show how you write tests? Just write a single, small one.
 
-- Take shortcuts, just add some comments explaining how you would do things normally if you had the time
+- Take shortcuts, just add some comments explaining how you would do things normally if you had the time.
 
-- Want to showcase something that takes too long to build? Just describe it using comments in your code, you don't have to actually implement it
+- Want to showcase something that takes too long to build? Just describe it using comments in your code, you don't have to actually implement it.
 
 ## API settings
 
@@ -117,6 +123,18 @@ To connect to the websocket (if you intend to use GraphQL subscriptions) you nee
 ```
 {token: "YOUR-API-TOKEN-HERE"}
 ```
+
+## Submission
+
+Please follow the instructions in the email we sent you to submit your code.
+
+## Troubleshooting
+
+Here are some known issues and workarounds to avoid them.
+
+- If you get an error inside GraphQL Playground when testing subscriptions, please simply reload the page. It should go away.
+
+- Chats/messages disappearing every hour? It's not a bug, it's a feature! Jokes apart, our mock API deletes all chats/messages every hour. Don't worry, it will generate new ones.
 
 ## Need help?
 
