@@ -1,6 +1,13 @@
 import React from 'react';
 import { gql, useSubscription } from "@apollo/client";
 
+/**
+ * This is just an example to check that the connection to the GraphQL API works.
+ * 
+ * Please explore the GraphQL API schema (see instructions in README) for more information
+ * on the API and the GraphQL fields that are available to you.
+ */
+
 const CHAT_CHANGED_SUBSCRIPTION = gql`
   subscription ChatChanged {
     chatChanged {

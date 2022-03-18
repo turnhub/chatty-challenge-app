@@ -1,6 +1,13 @@
 import React from 'react';
 import { useQuery, gql } from "@apollo/client";
 
+/**
+ * This is just an example to check that the connection to the GraphQL API works.
+ * 
+ * Please explore the GraphQL API schema (see instructions in README) for more information
+ * on the API and the GraphQL fields that are available to you.
+ */
+
 const CHATS_QUERY = gql`
   query Chats {
     chats {

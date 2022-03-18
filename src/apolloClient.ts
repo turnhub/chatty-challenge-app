@@ -4,7 +4,15 @@ import { getMainDefinition } from '@apollo/client/utilities';
 import { GraphQLWsLink } from '@apollo/client/link/subscriptions';
 import { createClient } from 'graphql-ws';
 
-// Access Token
+/**
+ * The code in this file configures the React Aoollo Client
+ * so that it is able to connect to the provided GraphQL API
+ * both over HTTP and websockets (for GraphQL subscriptions).
+ */
+
+// API Access Token
+// Please remember to add your API token to your `.env` file
+// as explained in the instructions.
 const ACCESS_TOKEN = process.env.REACT_APP_API_TOKEN;
 
 // GrahpQL API endpoints
