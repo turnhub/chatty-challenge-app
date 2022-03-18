@@ -22,11 +22,11 @@ Here are the most important requirements:
 
 3. From the same main area, it should be possible to send a new message in the chat.
 
-4. New incoming chats/messages (both received and sent) should show up in the app without needing to reload the page.
+4. New chats/messages (both received and sent) should show up in the app without needing to reload the page.
 
 ## Technical requirements
 
-You are free to use any libraries you want for the challenge, but please make sure to follow the these technical requirements. Also consider using this starter React project (instructions in dedicated paragraph below) to accelerate times.
+You are free to use any libraries you want for the challenge, but please make sure to follow these technical requirements. Also consider using this starter React project (instructions in dedicated paragraph below) to accelerate times.
 
 - The app should be built using the lastest version of React.
 
