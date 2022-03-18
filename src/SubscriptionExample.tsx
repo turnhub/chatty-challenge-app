@@ -42,7 +42,9 @@ interface ChatChangedSubscriptionData {
 }
 
 function SubscriptionExample() {
-  const { data } = useSubscription<ChatChangedSubscriptionData>(CHAT_CHANGED_SUBSCRIPTION);
+  const { data, error } = useSubscription<ChatChangedSubscriptionData>(CHAT_CHANGED_SUBSCRIPTION);
+
+  if (error) return (<p>{`Error! ${error.message}`}</p>);
 
   const chat = data?.chatChanged;
 
