@@ -1,20 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
-import QueryExample from './QueryExample';
-import SubscriptionExample from './SubscriptionExample';
+import Chats from './Chats';
+import Messages from './Messages';
+// import SubscriptionExample from './SubscriptionExample';
 
 function App() {
+  const [currentChatId, setCurrentChatId] = useState('');
+
   return (
-    <div>
-      {!process.env.REACT_APP_API_TOKEN &&
-        <strong style={{ color: "red" }}>API TOKEN MISSING! Check instructions and it to your .env file.</strong>
-      }
+    <div className="chatty-app">
+      <div className="chats">
+        <Chats setCurrentChatId={setCurrentChatId} />
+      </div>
 
-      <h2>GraphQL Query example</h2>
-      <QueryExample />
-
-      <h2>GraphQL Subscription example</h2>
-      <SubscriptionExample />
+      <div className="messages">
+        <Messages currentChatId={currentChatId} />
+      </div>
+      {/* <div>
+        <h2>GraphQL Subscription example</h2>
+        <SubscriptionExample />
+      </div> */}
     </div>
   );
 }

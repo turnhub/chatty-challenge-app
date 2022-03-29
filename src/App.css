@@ -1,1 +1,75 @@
+.chatty-app {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  justify-content: center;
+  border: solid 1px black;
+}
 
+.chats ul {
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  overflow-y: scroll;
+  border-right: solid 1px lightgray;
+}
+
+.chats li {
+  display: flex;
+  flex-direction: column;
+  height: 48px;
+  padding: 8px;
+  overflow: clip;
+  border-bottom: solid 1px lightgray;
+  list-style: none;
+}
+
+.chats li:hover {
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.messages {
+  background: #f1f1f1;
+}
+
+.messages ul {
+  height: 90vh;
+  overflow-y: scroll;
+  padding: 10px;
+  margin: 0;
+  box-shadow: inset 5px 0px 6px -2px #d7d0d8;
+}
+
+.messages li {
+  margin: 16px;
+  padding: 8px;
+  width: 80%;
+  background: white;
+  border: solid 1px black;
+  border-radius: 10px;
+  box-shadow: 5px 3px 5px 1px #d7d0d8;
+  list-style: none;
+}
+
+.messages .no-chat {
+  text-align: center;
+}
+
+.send-message {
+  display: flex;
+  gap: 8px;
+  align-items: stretch;
+  height: 3rem;
+  padding: 8px;
+  border-top: solid 1px darkgray;
+}
+
+.send-message input {
+  width: 80%;
+}
+
+.send-message button {
+  width: 20%;
+}
